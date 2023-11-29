@@ -32,9 +32,9 @@ class Snake:
 
     def move(self):
         for segment_idx in range(len(self.segments) - 1, 0, -1):
-            x_cor = self.segments[segment_idx - 1].xcor()
-            y_cor = self.segments[segment_idx - 1].ycor()
-            self.segments[segment_idx].goto(x_cor, y_cor)
+            xcor = self.segments[segment_idx - 1].xcor()
+            ycor = self.segments[segment_idx - 1].ycor()
+            self.segments[segment_idx].goto(xcor, ycor)
         self.head.fd(move_dist)
 
     def up(self):
